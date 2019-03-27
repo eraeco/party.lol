@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Think</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+		<link rel="stylesheet" type="text/css" href="/style.css">
+  </head>
+	<body>
+		<div id="think" class="hue page">
+			<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:300italic' rel='stylesheet' type='text/css'>
+			<style>
+				#think {
+					font-size: 24pt;
+					font-size: 6vmin;
+					font-family: 'Alegreya Sans', sans-serif;
+					color: white;
+				}
+				#think li {
+					width: 90%;
+					margin-top: 0.3em;
+					border-bottom: 1px dashed white;
+				}
+				#think .add {
+					width: 1em;
+					height: 1em;
+					line-height: 1em;
+					padding: 0.5em;
+					font-family: Tahoma, arial;
+					text-align: center;
+					border-radius: 50%;
+				}
+				#think ul, #think li {
+					list-style-type: circle;
+					margin-left: 0.5em;
+				}
+			</style>
+			<div class="pad whitet" style="width: 75%;">
+				<div style="margin-top: 2%;">
+					<div class="rubric left center">Add a Thought...</div>
+					<a href="#" class="right huet white act add">+</a>
+				</div>
+				<ul>
+				</ul>
+			</div>
+			
+			<script src="/jquery.js"></script>
+			<script src="/gun.js"></script>
+			<script src="/gun/nts.js"></script>
+			<script>			
+				// Check out the interactive tutorial
+				// for how to build a simplified version
+				// of this example: https://scrimba.com/c/cW2Vsa
+				var gun = Gun(location.origin+'/gun');
+				var think = gun.get('think/' + location.hash.slice(1));
+				var typing, throttle;
+				$('.add').on('click', function(){
+					$('<li>').attr('contenteditable', true).prependTo('ul');
+				});
+				$(document).on('keyup', "[contenteditable=true]", function(){
+					var li = $(this), id = li.attr('id');
+					if(!id){
+						li.attr('id', id = Gun.text.random());
+					}
+					typing = id;
+					clearTimeout(throttle);
+					throttle = setTimeout(function(){
+						think.get(id).put(li.text());
+						typing = false;
+					},10);
+				});
+				think.map().on(function(thought, id){
+					var li = $('#'+id)[0] || $('<li>').attr('id', id).attr('contenteditable', true).prependTo('ul');
+					if(thought){
+						if(id === typing){ return }
+						$(li).text(thought);
+					} else {
+						$(li).hide();
+					}
+				});
+			</script>
+		</div>
+	</div>
+</body>

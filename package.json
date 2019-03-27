@@ -1,0 +1,31 @@
+{
+  "name": "party",
+  "version": "1.22.10",
+  "description": "Make the web fun again! Take back control & ownership of your data.",
+  "main": "index.js",
+  "dependencies": {
+    "gun": "^0.2019.323"
+  },
+  "scripts": {
+    "ext": "bash ./ext.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eraeco/party.lol.git"
+  },
+  "keywords": [
+    "party",
+    "lol",
+    "privacy",
+    "encryption",
+    "e2ee",
+    "extension",
+    "party.lol"
+  ],
+  "author": "ERA",
+  "license": "(Zlib OR MIT OR Apache-2.0)",
+  "bugs": {
+    "url": "https://github.com/eraeco/party.lol/issues"
+  },
+  "homepage": "https://github.com/eraeco/party.lol#readme"
+}
