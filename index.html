@@ -128,10 +128,15 @@
 							$('#hpass').on('focus', () => {
 								var alias = $("#halias").val();
 								if(!alias){ return }
-								$('#alias').val(alias);
+								//$('#alias').val(alias);
 								$.as.route('sign');
-								$('#pass').focus();
+								//$('#pass').focus();
 							});
+							setTimeout(() => { 
+								//$('#halias').focus();
+								window.faces('#faces', 100);
+								window.faces('#faces2', 40);
+							},1);
 						});
 						if(!location.hash){
 							$.as.route.index();
