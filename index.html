@@ -8,6 +8,11 @@
 		<link href="https://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
 		<style>
+			.line {
+				width: 100%;
+				height: 1px;
+				background: url('./media/colors.gif') repeat;
+			}
 			.write {
 				font-family: 'Caveat', sans-serif;
 			}
@@ -67,6 +72,9 @@
 					margin-left: 2%;
 					margin-bottom: 2%;
 				}
+				#faces, #faces div {
+					overflow: visible;
+				}
 				#hi .faces img {
 					w-idth: 5%;
 					width: 3em;
@@ -86,11 +94,14 @@
 					background: white;
 					color: black;
 				}
+				#hi .tos {
+					height: 2em;
+					font-size: 8pt;
+				}
 			</style>
 			<div class="loud write shout rim">Join the Private Party!</div>
 			<div id="faces" class="flush faces">
 				<div class="right" style="max-width: 30em;">
-					
 					<a id="install" href="http://party.lol/404.html" target="_blank"><button class="ton">Install Now</button></a>
 					<div id="install-instructions" style="display:none; margin: 0.5em;">
 						<p>App store not loading? Install it manually:</p>
@@ -121,6 +132,7 @@
 							$('html, body').stop(true, true).animate({scrollTop: $('#how-it-works').offset().top});
 						}); 
 					</script>
+					<center class="tos">By clicking, you agree to the Terms of Use.</center>
 					<!-- input id="halias" class="write jot sap" placeholder="username">
 					<input id="hpass" type="password" class="write jot sap" placeholder="passphrase" -->
 					<script>
@@ -135,7 +147,7 @@
 							setTimeout(() => { 
 								//$('#halias').focus();
 								window.faces('#faces', 100);
-								window.faces('#faces2', 40);
+								//window.faces('#faces2', 40);
 							},1);
 						});
 						if(!location.hash){
@@ -186,43 +198,56 @@
 			<div id="what" class="pad ditch">
 				<p class="loud"><i>Your friend has invited you to add a privacy extension to your browser:</i></p>
 				<p> - Send and decrypt secret messages from your friends anywhere on the internet!</p>
-				<p> - Stops tech companies (even us) from using & abusing your private data.</p>
+				<p> - Stops tech companies (even us) from mass "surveillance capitalism".</p>
 				<p> - Gives you ownership and control over all your data online.</p>
 				<p> - Creates a searchable history of your posts, your friend list, and more!</p>
 			</div>
-			<div id="faces2" class="flush faces"></div>
-			<div class="pad ditch">
-				<p class="loud"><i>Express your thoughts & connect with the world around you!</i></p>
-				<p> - Discover new relationships.</p>
-				<p> - Keep up with friends and news in realtime.</p>
-				<p> - Watch fun videos and photos from people who share.</p>
-				<p> - But this time, you own it: fully decentralized.</p>
-				<p> - Cut out the middleman! No more tech monopolies!</p>
+			<div class="black">
+				<div class="line"></div>
+				<div id="faces2" class="flush faces"></div>
+				<div class="pad ditch">
+					<p class="loud"><i>Express your thoughts & connect with the world around you!</i></p>
+					<p> - Discover new relationships.</p>
+					<p> - Keep up with friends and news in realtime.</p>
+					<p> - Watch fun videos and photos from people who share.</p>
+					<p> - But this time, you own it: fully decentralized.</p>
+					<p> - Cut out the middleman! No more tech monopolies!</p>
+				</div>
 			</div>
-			<div id="how-it-works" class="pad ditch" style="margin-top: 1em;">
-				<p><span class="loud write shout">How it works:</span><!-- span class="write loud">, you are currently connected to <b id="peers" class="huet4">2</b> peers. <b>Why not try to sign up or log in?</b></span --></p>
-				<p> 1. See a secret post from your friend.</p>
-				<p> 2. Install the browser extension if you haven't already.</p>
-				<p> 3. Your friends' posts automatically get decrypted!</p>
-				<p> 4. Post your own secret messages anywhere on the web!</p>
-				<p> - It uses military grade <a href="https://gun.eco/docs/Cartoon-Cryptography" target="_blank">cryptographic security</a> to protect you.</p>
-				<p> - We (or others) do not have access to your password or private keys.</p>
-				<p class="write loud">Party Mode: <img src="./media/parrot.gif" class="parrot"><img src="./media/parrot.gif" class="parrot"><img src="./media/parrot.gif" class="parrot"></p>
-				<p> - Makes it easy for your Party friends to see data, but hard for companies & governments to see it.</p>
-				<p> - Stops surveillance capitalism & mass surveillance through expensive <a href="https://gun.eco/docs/Privacy-What-You-Need-To-Know" target="_blank">energy sucking time hogs</a>.</p>
-				<p> - Say Facebuck gets 10K+ posts a second, it would take them 1+ hour to decrypt each second of data.</p>
-				<p> - But it only takes half a second for other Party friends to decrypt one of your messages.</p>
-				<p class="write loud">Secret Agent Mode:</p>
-				<p> - It requires you verify your friends, which is a little extra work, but then only they can decrypt.</p>
-				<p> - Nobody else can see your data, not other Party users, not tech monopolies, not governments.</p>
-				<p> - You cannot use it for illegal purposes. If you do, governments will steal your laptop to decrypt.</p>
-				<p> - You can use it to share private information with your verified friends, gf/bf, coworkers, etc.</p>
-				<!-- p> - Your identity is created by you. Not on a server.</p>
-				<p> - It uses secure <a href="https://gun.eco/docs/Cartoon-Cryptography" target="_blank">cryptographic</a> methods to protect you.</p>
-				<p> - Only you have access to it, meaning even we cannot reset your password!</p>
-				<p> - For added security, you can freely <a href="https://github.com/amark/gun" target="_blank">download</a> and run it on your own computer.</p -->
+			<div>
+				<div class="line"></div>
+				<div id="how-it-works" class="pad ditch" style="margin-top: 1em;">
+					<div>
+					<p><span class="loud write shout">How it works:</span><!-- span class="write loud">, you are currently connected to <b id="peers" class="huet4">2</b> peers. <b>Why not try to sign up or log in?</b></span --></p>
+					<p> 1. See a secret post from your friend.</p>
+					<p> 2. Install the browser extension if you haven't already.</p>
+					<p> 3. Your friends' posts automatically get decrypted!</p>
+					<p> 4. Post your own secret messages anywhere on the web!</p>
+					<p> - It uses military grade <a href="https://gun.eco/docs/Cartoon-Cryptography" target="_blank">cryptographic security</a> to protect you.</p>
+					<p> - We (or others) do not have access to your password or private keys.</p>
+					</div>
+					<div>
+					<p class="write loud">50% Privacy: Party Mode! <img src="./media/parrot.gif" class="parrot"><img src="./media/parrot.gif" class="parrot"><img src="./media/parrot.gif" class="parrot"></p>
+					<p> - Makes it easy for people at the Party to see data, but hard for companies & governments.</p>
+					<p> - Stops surveillance capitalism & mass surveillance through expensive <a href="https://gun.eco/docs/Privacy-What-You-Need-To-Know" target="_blank">energy sucking time hogs</a>.</p>
+					<p> - Say Facebuck gets 10K+ posts a second, it would take them 1+ hour to decrypt each second of data.</p>
+					<p> - But it only takes half a second for other Party friends to decrypt one of your messages.</p>
+					</div>
+					<div>
+					<p class="write loud">100% Privacy: Secret Agent Mode!</p>
+					<p> - It requires you verify your friends, which is a little extra work, but then only they can decrypt.</p>
+					<p> - Nobody else can see your data, not other Party users, not tech monopolies, not governments.</p>
+					<p> - You cannot use it for illegal purposes. If you do, governments will steal your laptop to decrypt.</p>
+					<p> - You can use it to share private information with your verified friends, gf/bf, coworkers, etc.</p>
+					<!-- p> - Your identity is created by you. Not on a server.</p>
+					<p> - It uses secure <a href="https://gun.eco/docs/Cartoon-Cryptography" target="_blank">cryptographic</a> methods to protect you.</p>
+					<p> - Only you have access to it, meaning even we cannot reset your password!</p>
+					<p> - For added security, you can freely <a href="https://github.com/amark/gun" target="_blank">download</a> and run it on your own computer.</p -->
+					</div>
+				</div>
 			</div>
 			<div class="black low">
+				<div class="line"></div>
 				<div class="pad huet">
 					<style>
 						.low a { 
