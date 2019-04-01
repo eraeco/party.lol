@@ -1,5 +1,12 @@
 node_modules/*
 !node_modules/gun
+node_modules/gun/examples/*
+!node_modules/gun/examples/jquery.js
+!node_modules/gun/examples/style.css
+!node_modules/gun/examples/pop.png
+!node_modules/gun/examples/basic
+node_modules/gun/test
+node_modules/gun/hooks
 npm-debug.log
 *data*
 *.db
