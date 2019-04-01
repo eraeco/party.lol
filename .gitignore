@@ -10,17 +10,5 @@ npm-debug.log
 .esm-cache
 .sessionStorage
 .localStorage
-
-background.js
 backup.js
 backup/
-content.js
-frame.html
-frame.js
-graph.html
-graph.js
-manifest.json
-options.html
-options.js
-popup.html
-popup.js

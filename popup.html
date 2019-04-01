@@ -1,0 +1,83 @@
+<html>
+<head>
+</head>
+<body>
+<style>
+	body, form, button, input, textarea {
+		font-size: 16pt;
+	}
+	#ask {
+		display: none;
+	}
+	#ask:target {
+		display: block;
+	}
+	button {
+		width: 100%;
+		padding: 1em;
+		color: white;
+		box-sizing: border-box;
+	}
+	.blue {
+		background: blue;
+	}
+	.red {
+		background: red;
+	}
+	#any {
+		display: none;
+	}
+	#any:target {
+		display: block;
+	}
+	#say {
+		border-bottom: dashed lightblue 0.1em;
+		min-height: 1em;
+		padding: 0.5em;
+	}
+	[contenteditable=true]:empty:before {
+	  content: attr(placeholder);
+	  display: block;
+	  color: grey;
+	}
+	#link {
+		background: black;
+	}
+	#options {
+		background: black;
+		width: 100%;
+		padding: 1em;
+		color: white;
+	}
+	.half {
+		width: 49%;
+		box-sizing: border-box;
+	}
+	.center {
+		text-align: center;
+	}
+</style>
+<div id="ask">
+	<p class="ask">dApp wants to act on your behalf. OK?</p>
+	<div class="center">
+		<button id="yes" class="half blue">YES</button>
+		<button id="no" class="half red">NO</button>
+	</div>
+</div>
+<div id="any">
+	<div><span class="ask">dApp wants to act on your behalf. OK?</span><small><small> press <kbd>ESC</kbd> to skip/exit.</small></small></div>
+	<div id="say" contenteditable="true" placeholder="Write here..."></div>
+	<div class="center">
+		<button id="encrypt" class="half red">&#x1F512; ENCRYPT</button>
+		<button id="broadcast" class="half blue">&#x1F4E2; BROADCAST</button>
+	</div>
+</div>
+<button id="options"><a id="options" href="./options.html" target="_blank" class="center act">OPTIONS</a></button>
+<!-- button id="link">Contact Book</button -->
+<script src="node_modules/gun/examples/jquery.js"></script>
+<script src="popup.js"></script>
+<script async src="node_modules/gun/lib/normalize.js"></script>
+<script async src="node_modules/gun/lib/monotype.js"></script>
+<script async src="node_modules/gun/lib/meta.js"></script>
+</body>
+</html>

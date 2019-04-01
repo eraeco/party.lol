@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Options</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./node_modules/gun/examples/style.css">
+	<link href="./media/font.css" rel="stylesheet">
+</head>
+<body class="whitet black">
+<div id="options" class="hue3 page">
+	<style>
+		.write {
+			font-family: 'Caveat', sans-serif;
+		}
+		.parrot {
+			width: 0.5em;
+		}
+	</style>
+	<div class="pad">
+		<div id="welcome">
+			<div class="write shout"><img src="./media/parrot.gif" class="parrot">Welcome to the Party! <img src="./media/parrot.gif" class="parrot"></div>
+			<ol>
+				<li>The <b>first</b> rule of Party Club is: You do not talk about Party Club! &#x1f64a;</li>
+				<li>The <i>second</i> rule of Party Club is: Practice safe texts, use encryption<sup><a href="#privacy">?</a></sup>, or else your grandma, the government, and zucking g&#x1f440;gle will peep on you. Capiche?</li>
+				<li>The <u>third</u> rule of Party Club is: Have fun, be excellent to each other, & party on! &#x1f917;</li>
+			</ol>
+			<div class="center rim"><img src="./media/excellent.gif" style="border: solid 0.5em black; border-radius: 0.5em;"></div>
+		</div>
+
+		<div id="privacy">
+			<style>
+				#privacy input {
+					width: auto;
+					margin-top: 0.4em;
+					margin-right: 0.5em;
+				}
+				#privacy ul {
+					margin-left: 0.5em;
+				}
+				#privacy li i {
+					font-size: 60%;
+					margin-left: 0.5em;
+				}
+			</style>
+			<div class="write shout">Your Privacy <img src="./media/secret.jpg" style="height: 1em; border-radius: 0.2em; vertical-align: middle;"></div>
+			<div>Encryption is what secret agents use to keep their data private.</div>
+			<div>Now you can be one too! This browser extension will automatically ask to encrypt your data and <i>try</i> to hide or make it hard for companies & governments to exploit. Here are the options and what they look like:</div>
+			<a href="./media/show.gif"><img src="./media/show.gif" class="sap" style="float: right; max-width: 22em; width: 38%; margin-left: 2%; margin-top: 1%;"></a>
+			<ul class="rim">
+				<li><label><input name="privacy" type="radio" value="common" checked> 50% Privacy: Allow other people at the party to decrypt data.<br/><i>This is the fun & games option. Warning: the party is over when the "parents" arrive.<sup><a href="https://gun.eco/docs/dWeb-The-Decentralized-Web" target="_blank">?</a></sup></i></label></li>
+				<li id="custom"><label><input name="privacy" type="radio" value="custom" disabled> 100% Privacy: Manually choose each time who can decrypt it.<br/><i>No party, go James Bond. Note: for security, it needs to use the decentralized internet.<sup><a href="https://gun.eco/docs/dWeb-The-Decentralized-Web" target="_blank">?</a></sup></i></label></li>
+			</ul>
+			<script></script>
+			<div></div>
+			<div><b>DO NOT USE THIS TOOL FOR ILLEGAL PURPOSES!</b></div>
+			<small><small>That violates &#x1f917; Rule #3 and your highschool snitch will inevitably rat you out to the police.</small></small><br/>
+		</div>
+
+		<div id="graph">
+			<style>
+				#graph ul {
+					margin-left: 0.5em;
+				}
+			</style>
+			<div class="write shout">Soul Mate</div>
+			<div>Soul Mate is your personal Search Engine for what you want in life. Try the <a href="./graph.html">alpha</a>. Options coming soon - keep PARTY installed to get new features and updates.</div>
+		</div>
+	</div>
+</div>
+<script src="node_modules/gun/examples/jquery.js"></script>
+<script src="node_modules/gun/gun.js"></script>
+<script src="node_modules/gun/sea.js"></script>
+<script src="options.js"></script>
+</body>
+</html>

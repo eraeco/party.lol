@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./node_modules/gun/examples/style.css">
+	<link href="./media/font.css" rel="stylesheet">
+</head>
+<body class="whitet black">
+	<div id="graph" class="hue2 page">
+		<style>
+			#graph ul .face {
+				float: left;
+				border-radius: 100%;
+				vertical-align: middle;
+				height: 2.5em;
+				margin-right: 5%;
+			}
+			#graph ul, #graph li {
+				overflow: visible;
+			}
+			#graph .who {
+				display: inline-block;
+				margin-right: 2%;
+				min-width: 250px;
+				width: 15em;
+				text-align: left;
+				padding: 2%;
+				vertical-align: middle;
+			}
+			#graph .what {
+			}
+			#graph .spoke {
+			}
+			#graph .pub {
+				max-width: 10em;
+				overflow: scroll;
+			}
+		</style>
+		<p class="loud pad">Soul Mate</p>
+		<p class="pad">Soul Mate is your personal Search Engine for what you want in life. It holds a Knowledge Graph of posts, people, and places you know or have seen online. If Google and Facebook can index your data, why shouldn't you have your own power search? This is an <b><i><u>alpha version</u></i></b>, and may break or reset.</p>
+		<ul class="mid row center">
+		</ul>
+		<div class="model">
+			<li class="who tint sap gully">
+				<div class="gap">
+					<span class="sort none"></span>
+					<img class="face act none" crossOrigin="Anonymous">
+					<big class="name"></big><br/>
+					<i class="alias"></i><br/>
+					<div class="pub"></div><br/>
+					<div class="none"><small>FB ID:</small> <span class="fbid"></span></div>
+				</div>
+			</li>
+		</div>
+		<div style="height: 10%;"></div>
+	</div>
+<script src="node_modules/gun/examples/jquery.js"></script>
+<script src="node_modules/gun/gun.js"></script>
+<script src="node_modules/gun/sea.js"></script>
+<script src="node_modules/gun/as.js"></script>
+<script src="graph.js"></script>
+</body>
+</html>
