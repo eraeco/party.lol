@@ -131,20 +131,6 @@ both.RPC.anonkey = async function(msg, ack){
 	if(!msg._.I){ return } // Error?
 	ack({anon: await anonkey()});
 }
-/*
-user = {
-	knows: {
-		name: {
-			'alice berry': {
-				1: {#pubkey},
-				2: {#pubkey},
-				3: {#fbid}
-			},
-			'stanford'
-		}
-	}
-}
-*/
 async function sha(t){
 	return await SEA.work(t, null, null, {name: 'SHA-256'})
 }
@@ -165,7 +151,6 @@ function low(t) {
     }
   );
 }
-
 function get(obj, at){
 	if(!obj){ return }
 	if(!at || !at.length){ return obj }
@@ -177,8 +162,6 @@ function get(obj, at){
 async function encrypt(msg){
 	if(!opt.custom){
 		var x = SEA.random(12).toString('base64'), y = SEA.random(12).toString('base64');
-		console.log("??????");
-		console.log(SEA.random(12));
 		var key = await SEA.work(x, y);//, null, {iterations: 500000}) // half million iteration = half second on mac air
 		var enc = await SEA.encrypt(msg, key, null, {raw: 1});
 		enc.v = 1;
@@ -208,18 +191,23 @@ async function decrypt(msg){
 }
 
 /* --------------------------- */
-
 async function say(msg){
 	if(!msg.say){ return }
-	var ref = user.get('who').get('all').set({what: msg.say});
-	user.get('who').get('said').set(ref);
-	if(false){ return }
-	var tmp = await ref.then(), mix = gun._.graph[tmp = Gun.node.soul(tmp)];
-	if(!mix){ return }
-	mix = SEA.opt.pack(mix.what,'what',mix,tmp);
-	if(!mix){ return }
-	return mix = (opt.introduce || "Want to join my private party? Install http://party.lol to read my secret post:")+"\n"+JSON.stringify(mix);
-	//return mix = (opt.introduce || "Want to join my private party? Install http://party.lol to read my secret post:")+"\n```\n"+JSON.stringify(mix)+"\n```";
+	var id = user._.opt.uuid;
+	if(!id){ return }
+	id = id();
+	if(!id){ return }
+	var pair = (user._||{}).sea;
+	var enc = await SEA.encrypt(msg.say, pair);
+	var node = Gun.state.ify({}, 'what', Gun.state(), enc, id);
+	var ref = user.get('who').get('all').get(id).put(node); // encrypt in gun ontop of PoW
+	user.get('who').get('said').get(id).put(Gun.val.link.ify(id));
+
+	node = Gun.obj.to(node, {what: msg.say});
+	var prep = SEA.opt.prep(node.what, 'what', node, id);
+	var sig = await SEA.sign(prep, pair);
+	if(!sig){ return }
+	return (opt.introduce || "Want to join my private party? Install http://party.lol to read my secret post:")+"\n"+sig;
 }
 say.key = async function(){
 	var mo = ':'+say.now().slice(0,2).join('.');

@@ -208,6 +208,7 @@ setInterval(function check(i){
     try{ size = btoa(el.css('font-size')) }catch(e){}
     //el.html("<iframe src='"+both.runtime.getURL('frame.html')+"?color="+color+"&size="+size+"&width="+el.width()+"#"+obj.m['#']+"' style='border: 0; width: 100%; height: 2em; margin: 0; padding: 0;'></iframe>");
     el.html("<iframe src='"+both.runtime.getURL('frame.html')+"?color="+color+"&size="+size+"&width="+el.width()+"#"+obj.m['#']+"' style='border: 0; width: "+el.width()+"px; height: 2em; margin: 0; padding: 0;'></iframe>");
+    hash.last = 1;
     //setTimeout(check, 1);
     //return false;
   });
