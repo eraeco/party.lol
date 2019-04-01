@@ -1,6 +1,6 @@
 {
   "name": "party",
-  "version": "1.22.10",
+  "version": "1.22.11",
   "description": "Make the web fun again! Take back control & ownership of your data.",
   "main": "index.js",
   "dependencies": {
@@ -27,5 +27,6 @@
   "bugs": {
     "url": "https://github.com/eraeco/party.lol/issues"
   },
+  "update_url": "https://era.eco/party/updates.xml",
   "homepage": "https://github.com/eraeco/party.lol#readme"
 }
