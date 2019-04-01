@@ -102,7 +102,7 @@
 			<div class="loud write shout rim">Join the Private Party!</div>
 			<div id="faces" class="flush faces">
 				<div class="right" style="max-width: 30em;">
-					<a id="install" href="http://party.lol/404.html" target="_blank"><button class="ton">Install Now</button></a>
+					<a id="install" href="https://chrome.google.com/webstore/detail/nfapiepfflahgefeplidfolkmiecmajf" target="_blank"><button class="ton">Install Now</button></a>
 					<div id="install-instructions" style="display:none; margin: 0.5em;">
 						<p>App store not loading? Install it manually:</p>
 						<p>1. Download and unzip <a href="https://github.com/eraeco/party.lol/archive/master.zip" target="_blank">this folder</a>.</p>
@@ -122,6 +122,10 @@
 									return;
 								}
 								window.open('https://chrome.google.com/webstore/detail/nfapiepfflahgefeplidfolkmiecmajf');
+
+								window.faces.stop = true;
+								$('#faces').children('img').remove();
+								$('#faces').prepend('<img src="https://era.eco/party/install.gif" style="width: 50%;">');
 							},500);
 						});
 					</script>
@@ -159,6 +163,7 @@
 			<script>
 				;(window.faces = function faces(id, lim, i){
 					//return
+					if(faces.stop){ return }
 					if(!$('#hi').is(':visible')){ return }
 					if(!id){ return }
 					if(!faces.on){ faces.on = id }
@@ -178,6 +183,7 @@
 					  url: 'https://randomuser.me/api/',
 					  dataType: 'json',
 					  success: (data) => {
+							if(faces.stop){ return }
 					    faces(id, lim || 100, (i || 0) + 1);
 					    if(!data || !data.results){ return }
 					    var tmp = data.results[0];
