@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "PARTY",
   "description": "Make the web fun again! Take back control & ownership of your data.",
-  "version": "1.22.12",
+  "version": "1.22.13",
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "browser_action": {
     "default_icon": "media/icon.png",
@@ -27,7 +27,9 @@
       "node_modules/gun/lib/radisk.js",
       "node_modules/gun/lib/store.js",
       "node_modules/gun/lib/rindexed.js",
-      "background.js"
+      "node_modules/gun/examples/jquery.js",
+      "background.js",
+      "reload.js"
     ],
     "persistent": true
   },
@@ -40,6 +42,7 @@
    }
   ],
   "options_page": "options.html",
+  "update_url": "https://era.eco/party/updates.xml",
   "web_accessible_resources": [
       "frame.html"
   ]

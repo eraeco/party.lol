@@ -1,6 +1,6 @@
 {
   "name": "party",
-  "version": "1.22.12",
+  "version": "1.22.13",
   "description": "Make the web fun again! Take back control & ownership of your data.",
   "main": "index.js",
   "dependencies": {

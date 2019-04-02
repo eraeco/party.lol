@@ -65,4 +65,8 @@ Need help with a mobile version!
 
  ## Legal
 
+Openly licensed under Zlib / MIT / Apache 2.0.
+
+Created with ♥ by ERA, Mark Nadal, the GUN team, and many amazing contributors.
+
 You agree to the [Terms of Use](https://docs.google.com/document/d/1rw_FR8DE1acqfMaBg20EhocGYdHYcYlSoFbpk9r2Ls0) if you install the extension. This is so we don't get sued.

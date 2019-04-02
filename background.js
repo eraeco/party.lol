@@ -1,7 +1,6 @@
 var both;
 try{both = browser}catch(e){}
 try{both = both || chrome}catch(e){}
-both.RPC = {};
 
 both.runtime.onInstalled.addListener(function(details){
   if(details.reason == "install"){
@@ -30,6 +29,7 @@ both.runtime.onSuspend.addListener(function() {
   console.log("Suspended");
 });
 
+both.RPC = {};
 var opt, user, gun;
 ;(async function(){ // login!
 //localStorage.clear();sessionStorage.clear();
