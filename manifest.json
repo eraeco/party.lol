@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "PARTY",
   "description": "Make the web fun again! Take back control & ownership of your data.",
-  "version": "1.22.13",
+  "version": "1.22.14",
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "browser_action": {
     "default_icon": "media/icon.png",

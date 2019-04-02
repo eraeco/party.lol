@@ -2,9 +2,14 @@
 <head>
 </head>
 <body>
+<link rel="stylesheet" type="text/css" href="./node_modules/gun/examples/style.css">
 <style>
 	body, form, button, input, textarea {
 		font-size: 16pt;
+	}
+	body {
+		min-height: 9em;
+		min-width: 20em;
 	}
 	#ask {
 		display: none;
@@ -46,12 +51,12 @@
 	#options {
 		background: black;
 		width: 100%;
-		padding: 1em;
 		color: white;
 	}
 	.half {
 		width: 49%;
 		box-sizing: border-box;
+		cursor: pointer;
 	}
 	.center {
 		text-align: center;
@@ -72,12 +77,14 @@
 		<button id="broadcast" class="half blue">&#x1F4E2; BROADCAST</button>
 	</div>
 </div>
-<button id="options"><a id="options" href="./options.html" target="_blank" class="center act">OPTIONS</a></button>
+<a id="options" href="./options.html" target="_blank" class="center act"><button id="options" class="act">OPTIONS</button></a>
 <!-- button id="link">Contact Book</button -->
 <script src="node_modules/gun/examples/jquery.js"></script>
 <script src="popup.js"></script>
+<script async src="node_modules/gun/lib/fun.js"></script>
 <script async src="node_modules/gun/lib/normalize.js"></script>
 <script async src="node_modules/gun/lib/monotype.js"></script>
 <script async src="node_modules/gun/lib/meta.js"></script>
+<script async src="reload.js"></script>
 </body>
 </html>
