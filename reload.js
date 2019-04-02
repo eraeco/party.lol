@@ -16,6 +16,6 @@ try{both = both || chrome}catch(e){}
   });
   }catch(e){ console.log(e) }
 
-  setInterval(check, 1000 * 60 * 3); // 
 
+  setTimeout(check, 1000 * 60 * 3); // in 3 hours
 }());

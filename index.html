@@ -40,7 +40,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/gun/examples/jquery.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/gun/sea.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/gun/as.js"></script>
+		<!-- script src="https://cdn.jsdelivr.net/npm/gun/as.js"></script -->
 		<script src="https://cdn.jsdelivr.net/npm/gun/nts.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/gun/lib/time.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/gun/lib/upload.js"></script>
@@ -64,6 +64,11 @@
 				}
 				this.S = S;
 			})();
+		</script>
+		<script>
+			$.as = $.as || {};
+			$.as.route = $.as.route || {};
+			$.as.route.page = $.as.route.page || function(n,f){};
 		</script>
 	</head>
 	<body class="whitet black">
@@ -106,10 +111,12 @@
 			<div class="loud write shout rim">Join the Private Party!</div>
 			<div id="faces" class="flush faces">
 				<div class="right" style="max-width: 30em;">
-					<a id="install" href="https://chrome.google.com/webstore/detail/nfapiepfflahgefeplidfolkmiecmajf" target="_blank"><button class="ton">Install Now</button></a>
+					<!-- a id="install" href="https://chrome.google.com/webstore/detail/nfapiepfflahgefeplidfolkmiecmajf" target="_blank"><button class="ton">Install Now</button></a -->
+					<a id="install" href="https://github.com/eraeco/party.lol/archive/master.zip" target="_blank"><button class="ton">Download</button></a>
 					<div id="install-instructions" style="display:none; margin: 0.5em;">
-						<p>App store not loading? Install it manually:</p>
-						<p>1. Download and unzip <a href="https://github.com/eraeco/party.lol/archive/master.zip" target="_blank">this folder</a>.</p>
+						<p>The app store is <a href="https://chrome.google.com/webstore/detail/nfapiepfflahgefeplidfolkmiecmajf" target="_blank">blocking</a> PARTY!</p>
+						<p>Go underground & install it manually:</p>
+						<p>1. Download and unzip<!-- a href="https://github.com/eraeco/party.lol/archive/master.zip" target="_blank"> this folder</a -->.</p>
 						<p>2. Go to "chrome://extensions/" in your URL bar.</p>
 						<p>3. Toggle developer mode on.</p>
 						<p>4. Click load unpacked, select the unzipped folder.</p>
@@ -118,14 +125,15 @@
 						<p> - Brave, Opera, etc. should work with Chrome's manual install.</p -->
 					</div>
 					<script>
-						$('#install').on('click', function(){ 
+						$('#install').on('click mouseover', function(){
+							if(this.already){ return } this.already = true;
 							$('#install-instructions').show();
 							setTimeout(function(){
-								if(/firefox/i.test(navigator.userAgent)){
+								/*if(/firefox/i.test(navigator.userAgent)){
 									window.open('http://party.lol/404.html');
 									return;
 								}
-								window.open('https://chrome.google.com/webstore/detail/nfapiepfflahgefeplidfolkmiecmajf');
+								window.open('https://chrome.google.com/webstore/detail/nfapiepfflahgefeplidfolkmiecmajf');*/
 
 								window.faces.stop = true;
 								$('#faces').children('img').remove();
