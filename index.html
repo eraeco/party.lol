@@ -79,7 +79,14 @@
 			<p class="shout">Private Party</p>
 			<p style="padding: 0 5%; margin-bottom: 0.5em;">Your friend has invited you to join the biggest underground party the internet has ever seen!<sup> ALPHA</sup></p>
 			<a href="#fullscreen"><button>WATCH TRAILER</button></a>
-			<a id="download" href="https://github.com/eraeco/party.lol/archive/master.zip" target="_blank"><button>DOWNLOAD</button>
+			<div id="download"><button>DOWNLOAD</button>
+<script>
+$('#download').on('click', function(){
+	setTimeout(function(){
+		window.open('https://chrome.google.com/webstore/detail/party/nfapiepfflahgefeplidfolkmiecmajf');
+	}, 600);
+})
+</script>
 <div id="install" class="foo">
 	<style>
 		#install {
@@ -90,6 +97,7 @@
 			display: block;
 		}
 		#download {
+			display: inline;
 			text-decoration: none;
 		}
 		.install p {
@@ -99,10 +107,9 @@
 	</style>
 	<div class="twin" style="text-align: justify; padding: 1% 0;"> <!-- style="float: left; text-align: left; padding: 5%; width: 49%; min-width: 16.5em;"> -->
 		<img src="https://era.eco/party/install.gif" style="width: 50%; float: left;">
-		<!-- p>The app store is <a href="https://chrome.google.com/webstore/detail/nfapiepfflahgefeplidfolkmiecmajf" target="_blank">blocking</a> PARTY!</p -->
-		<p>The app store is now blocking PARTY!</p>
-		<p>Go underground & install it manually:</p>
-		<p>1. Click download, <i>then unzip</i>.</p>
+		<p>We've had problems with the <a href="https://chrome.google.com/webstore/detail/party/nfapiepfflahgefeplidfolkmiecmajf" target="_blank">chrome store</a> blocking us.</p>
+		<p>So we recommend installing it manually instead:</p>
+		<p>1. Click <a href="https://github.com/eraeco/party.lol/archive/master.zip" target="_blank">download</a>, <i>then unzip</i>.</p>
 		<p>2. Go to "chrome://extensions/" in your URL bar.</p>
 		<p>3. Toggle developer mode on.</p>
 		<p>4. Click load unpacked, select the unzipped folder.</p>
@@ -110,7 +117,7 @@
 		<p> - Mobile, Safari, IE/Edge support coming soon.</p>
 		<p> - Brave, Firefox, Opera, etc. work similar to Chrome's manual install.</p>
 	</div>
-</div></a>
+</div></div>
 
 			<center class="tos">By clicking, you agree to the <a href="https://docs.google.com/document/d/1rw_FR8DE1acqfMaBg20EhocGYdHYcYlSoFbpk9r2Ls0" target="_blank">Terms of Use</a> & <a href="https://docs.google.com/document/d/1NM9j6pTf_o2EZL7B_FhBp8pCYyFRBA1eP0F0mxq_moQ">Privacy Policy</a>.</center>
 		</div>
