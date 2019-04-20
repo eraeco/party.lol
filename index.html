@@ -19,21 +19,17 @@
 	.loud {
 		font-size: 200%;
 	}
-
 	.far {
 		position: absolute;
 		text-align: center;
 		overflow: visible;
 		text-align: center;
 	}
-	.tw-in {
-	  columns: 2 16.5em;
-	  column-gap: 0;
-	  break-inside: avoid-column;
-    -webkit-column-break-inside: avoid;
+	.line {
+		text-decoration: underline;
 	}
 	.now p {
-		line-height: 2em;
+		line-height: 2;
 	}
 
 	.huef {
@@ -70,7 +66,7 @@
 	}
 </style>
 <div id="top">
-	<div class="page huef">
+	<div class="page hold huef">
 		<style>
 		.tos { font-size: 8pt; margin-top: 1em; }
 		p sup { font-size: 60%; }
@@ -78,16 +74,15 @@
 		<div class="now center" style="padding: 7% 0 2%;">
 			<p class="shout">Private Party</p>
 			<p style="padding: 0 5%; margin-bottom: 0.5em;">Your friend has invited you to join the biggest underground party the internet has ever seen!<sup> ALPHA</sup></p>
-			<a href="#fullscreen"><button>WATCH TRAILER</button></a>
-			<div id="download"><button>DOWNLOAD</button>
-<script>
+			<div>
+				<a class="unit hold" href="#fullscreen"><button style="font-size: 16pt;">WATCH TRAILER</button></a>
+				<div class="unit hold" id="download" style="vertical-align: top;"><button style="font-size: 16pt;">DOWNLOAD</button><script>
 $('#download').on('click', function(){
 	setTimeout(function(){
 		window.open('https://chrome.google.com/webstore/detail/party/nfapiepfflahgefeplidfolkmiecmajf');
 	}, 600);
 })
-</script>
-<div id="install" class="foo">
+</script><div id="install" class="foo">
 	<style>
 		#install {
 			display: none;
@@ -101,15 +96,15 @@ $('#download').on('click', function(){
 			text-decoration: none;
 		}
 		.install p {
-			line-height: 2em;
+			line-height: 2;
 			margin: 0 2%;
 		}
 	</style>
-	<div class="twin" style="text-align: justify; padding: 1% 0;"> <!-- style="float: left; text-align: left; padding: 5%; width: 49%; min-width: 16.5em;"> -->
+	<div style="text-align: justify; padding: 1% 0;"> <!-- style="float: left; text-align: left; padding: 5%; width: 49%; min-width: 16.5em;"> -->
 		<img src="https://era.eco/party/install.gif" style="width: 50%; float: left;">
-		<p>We've had problems with the <a href="https://chrome.google.com/webstore/detail/party/nfapiepfflahgefeplidfolkmiecmajf" target="_blank">chrome store</a> blocking us.</p>
+		<p>We've had problems with the <a class="line" href="https://chrome.google.com/webstore/detail/party/nfapiepfflahgefeplidfolkmiecmajf" target="_blank">chrome store</a> blocking us.</p>
 		<p>So we recommend installing it manually instead:</p>
-		<p>1. Click <a href="https://github.com/eraeco/party.lol/archive/master.zip" target="_blank">download</a>, <i>then unzip</i>.</p>
+		<p>1. Click <a class="line" href="https://github.com/eraeco/party.lol/archive/master.zip" target="_blank">download</a>, <i>then unzip</i>.</p>
 		<p>2. Go to "chrome://extensions/" in your URL bar.</p>
 		<p>3. Toggle developer mode on.</p>
 		<p>4. Click load unpacked, select the unzipped folder.</p>
@@ -117,12 +112,12 @@ $('#download').on('click', function(){
 		<p> - Mobile, Safari, IE/Edge support coming soon.</p>
 		<p> - Brave, Firefox, Opera, etc. work similar to Chrome's manual install.</p>
 	</div>
-</div></div>
+</div></div></div>
 
 			<center class="tos">By clicking, you agree to the <a href="https://docs.google.com/document/d/1rw_FR8DE1acqfMaBg20EhocGYdHYcYlSoFbpk9r2Ls0" target="_blank">Terms of Use</a> & <a href="https://docs.google.com/document/d/1NM9j6pTf_o2EZL7B_FhBp8pCYyFRBA1eP0F0mxq_moQ">Privacy Policy</a>.</center>
 		</div>
 
-<div id="fullscreen"><style>#fullscreen { display: none; z-index: 999999999999999; position: absolute; top: 0; left: 0; width: 100%; background: black; text-align: center; } #fullscreen:target { display: block; }</style><div style="position: relative; padding-bottom: 56.25%;"><iframe src="https://www.youtube.com/embed/N31QsL7W9gI?rel=0" frameborder="0" allowfullscreen style="left: 0; border: 0px; position: absolute; width: 100%; height: 100%;"></iframe></div><a href="#" style="position: absolute; top: 0; right: 0; width: 30%; height: 40%;"><div style="background: black; position: absolute; width: 2em; height: 2em; right: 1em; top: 1em; border-radius: 5em; padding: 0.2em 0.1em 0 0;">x</div></a>
+<div id="fullscreen"><style>#fullscreen { display: none; z-index: 999999999999999; position: absolute; top: 0; left: 0; width: 100%; background: black; text-align: center; } #fullscreen:target { display: block; }</style><div style="position: relative; padding-bottom: 56.25%;"><iframe src="https://www.youtube.com/embed/N31QsL7W9gI?rel=0" frameborder="0" allowfullscreen style="left: 0; border: 0px; position: absolute; width: 100%; height: 100%;"></iframe></div><a href="#" style="position: absolute; top: 0; right: 0; width: 30%; height: 40%; background: transparent;"><div style="background: black; position: absolute; width: 2em; height: 2em; right: 1em; top: 1em; border-radius: 5em; padding: 0.2em 0.1em 0 0;">x</div></a>
 </div>
 
 		<div class="far">
@@ -192,7 +187,7 @@ window.faces('#faces');
 </script>
 	</div>
 
-	<div class="hue2 twin" style="padding: 5% 0 5%; text-align: center;">
+	<div class="hold hue2 center" style="padding: 5% 0 5%;">
 		<style>	
 .spy-move {
 	left: 45%;
@@ -209,7 +204,7 @@ window.faces('#faces');
 				<p class="loud" style="margin-bottom: 0.2em;">Anti-Surveillance Capitalism</p>
 				<p>Private Party is a browser extension that encrypts your posts so Tech Giants (and us) can't mass spy, censor, profit, or prey on you.</p>
 				<p>Party Mode uses Bitcoin-like Proof-of-Work key derivation to melt bad guys' servers!</p>
-				<a href="https://gun.eco/docs/Privacy-What-You-Need-To-Know"><center>Learn more.</center></a>
+				<a class="line" href="https://gun.eco/docs/Privacy-What-You-Need-To-Know"><center>Learn more.</center></a>
 			</div>
 		</div>
 		<img src="https://era.eco/party/spytop.png" class="spy-move" style="position: absolute; top: 0; left: 45%; width: 15%;">
@@ -218,25 +213,25 @@ window.faces('#faces');
 		</div>
 	</div>
 
-	<div class="hue3 twin" style="padding: 5% 0 5%; text-align: center;">
+	<div class="hue3" style="padding: 5% 0 5%; text-align: center;">
 		<div style="text-align: right; display: inline-block; vertical-align: 50%;">
 			<img src="https://era.eco/party/e2ee.png" style="width: 100%; max-width: 20em;">
 		</div>
 		<div class="now pad" style="text-align: justify; display: inline-block; max-width: 60%; margin: 0;">
 			<div>
 				<p class="loud" style="margin-bottom: 0.2em;">Private Security</p>
-				<p>We have the best bouncer & DJ in town: ex-Navy wartime specialist, <a href="https://gun.eco/docs/Cartoon-Cryptography">Crypt O'Graphy</a>.</p>
+				<p>We have the best bouncer & DJ in town: ex-Navy wartime specialist, <a class="line" href="https://gun.eco/docs/Cartoon-Cryptography">Crypt O'Graphy</a>.</p>
 				<p>Secret Agent Mode has 100% security using peer-to-peer Diffie-Hellman key exchange.</p>
-				<a href="https://github.com/eraeco/party.lol#can-websites-scrape-data-after-it-is-decrypted-no"><center>Learn more.</center></a>
+				<a class="line" href="https://github.com/eraeco/party.lol#can-websites-scrape-data-after-it-is-decrypted-no"><center>Learn more.</center></a>
 			</div>
 		</div>
 	</div>
 
-	<div class="hue4 twin" style="padding: 5% 0 5%; text-align: center;">
-			<a href="#top"><button style="background: url('./media/colors.gif'); border-color: black; margin-bottom: 0.5em;">INSTALL</button></a>
+	<div class="hue4" style="padding: 5% 0 5%; text-align: center;">
+			<a href="#top"><button style="background: url('./media/colors.gif'); border-color: black; margin-bottom: 0.5em; font-size: 16pt;">INSTALL</button></a>
 	</div>
 
-	<div class="black twin" style="padding: 5% 0 5%;">
+	<div class="black" style="padding: 5% 0 5%;">
 		<div class="now pad">
 			<div>
 				<p class="loud">For You,</p>
