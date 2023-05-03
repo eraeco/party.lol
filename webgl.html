@@ -1,0 +1,14 @@
+<script class="SecureRender" src="https://securerender.org/tmp/content.js" integrity="sha384-8Piovr+Zj3VogsG8kSYtFABR5M17uNvdBA+JCH/iANpHga01VPzsljwklbhie9/c" crossorigin="anonymous">
+if(the.i > 99){
+  the.last.grab = [the.player.x = the.aim.x, the.player.y = -the.aim.y, 0];
+  return
+}
+
+the.i = (the.i || 0) + 1;
+
+the.last  = the.view({
+  fill: [Math.random(), Math.random(), Math.random()],
+  size: [[5,'~'], [5,'~'], [5,'~']],
+  grab: [0,0,0]
+}).into();
+</script>
